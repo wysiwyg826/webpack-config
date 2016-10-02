@@ -1,5 +1,6 @@
 # webpack-config
-> webpack配置详细设置说明
+webpack配置详细设置说明
+
 ```
 /**
  * CLI
