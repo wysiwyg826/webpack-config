@@ -1,0 +1,2 @@
+webpackJsonp([1],[function(o,n,i){i(4),o.exports=i(5)},,,function(o,n){},function(o,n,i){console.log("i'm page2."),i(3);var c=i(1);c("this is page2")},function(o,n){console.log("i'm page3.");for(var i=0;i<10;i++)console.log("i ",i)}]);
+//# sourceMappingURL=page2.bundle.js.map

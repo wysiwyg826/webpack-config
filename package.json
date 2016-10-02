@@ -1,0 +1,27 @@
+{
+  "name": "webpack-config",
+  "version": "1.0.0",
+  "description": "详细说明webpack的各项配置",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline --progress --color --proflie --display-error-details --config webpack.config.js",
+    "publish-mac": "export NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details",
+    "publish-win": "set NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "wysiwyg826",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.22.0",
+    "open-browser-webpack-plugin": "0.0.2",
+    "postcss-loader": "^0.13.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
