@@ -1,6 +1,6 @@
 /**
  * CLI
-    "start": "webpack-dev-server --hot --inline --progress --color --proflie --display-error-details",
+    "dev": "webpack-dev-server --hot --inline --progress --color --proflie --display-error-details",
     "publish-mac": "export NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details",
     "publish-win": "set NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details"
  */

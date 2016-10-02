@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "详细说明webpack的各项配置",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://wysiwyg826@github.com/wysiwyg826/webpack-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wysiwyg826/webpack-config/issues"
+  },
+  "homepage": "https://github.com/wysiwyg826/webpack-config#readme",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --progress --color --proflie --display-error-details --config webpack.config.js",
+    "dev": "webpack-dev-server --hot --inline --progress --color --proflie --display-error-details --config webpack.config.js",
     "publish-mac": "export NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details",
     "publish-win": "set NODE_ENV=prod&&webpack -p --progress --colors --proflie --display-error-details"
   },
