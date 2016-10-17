@@ -14,10 +14,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var ENV = process.env.npm_lifecycle_event;
 
+var projectRoot = path.resolve(__dirname);
+var appPath = path.resolve(__dirname, './');
+var tmplPath = path.resolve(__dirname, './tmpl');
+
+
 var dev = ENV === "dev"
 var publish = ENV === "publish-mac" || ENV === "publish-win"
 
 var port = 8080;
+
 
 
 module.exports = function() {
@@ -30,13 +36,13 @@ module.exports = function() {
 
   //入口文件配置
   config.entry = {
-    page1: './page1.js',
+    page1: path.resolve(appPath, 'page1.js'),
     page2: ['./page2.js', './page3.js'] //支持数组形式，将加载数组中的所有模块，但以最后一个模块作为输出
   };
 
   //输出文件配置
   config.output = {
-    path: "dist/page", //本地输出位置
+    path: path.resolve(appPath, 'dist'), //本地输出位置
     //publicPath:"http://www.yoursite.com", //资源文件访问的绝对地址
     filename: "[name].bundle.js"
       // page1.bundle.js 和入口配置文件关联
@@ -65,7 +71,7 @@ module.exports = function() {
     new HtmlWebpackPlugin({
       title: 'new html', //设置title的名字
       filename: 'index.html', //设置这个html的文件名 
-      template: 'tmpl/template.html', //要使用的模块的路径  
+      template: path.resolve(tmplPath, 'template.html'), //要使用的模块的路径  
       inject: 'body', //把模板注入到哪个标签后 'body'
       // favicon: './images/favico.ico', // 图标，
       chunks:['common','page1'],//限定引入文件
